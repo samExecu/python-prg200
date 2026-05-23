@@ -6,7 +6,7 @@ currentBalance = int(input("Enter your current account balance: "))
 dailyWithdrawn = int(input("Amount of money you have withdrawn today: "))
 
 #configuring negative value validation
-if(currentBalance or dailyWithdrawn < 0):
+if(currentBalance < 0 or dailyWithdrawn < 0):
   print("Invalid Balance or Daily Withdrawl Amount!")
   sys.exit()
 
