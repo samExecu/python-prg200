@@ -16,11 +16,30 @@ def passwordValidation(password):
     if i in specialCharacter: specChar += 1
 
   #printing out missing criterias if any, if not updating the verified variable by 1
-  print("Password needs to be atleast 8 character long") if (len(password) < 8) else verified += 1
-  print("Password must contain atleast 1 uppercase letter") if (upChar < 1) else verified += 1
-  print("Password must contain atleast 1 lowercase letter") if (lowChar < 1) else verified += 1
-  print("Password must contain atleast 1 digit") if (digit < 1) else verified += 1
-  print("Password must contain atleast 1 special character from !@#$%^&*") if (specChar < 1) else verified += 1
+  if len(password) < 8:
+    print("Password needs to be at least 8 characters long")
+  else:
+    verified += 1
+
+  if upChar < 1:
+    print("Password must contain at least 1 uppercase letter")
+  else:
+    verified += 1
+
+  if lowChar < 1:
+    print("Password must contain at least 1 lowercase letter")
+  else:
+    verified += 1
+
+  if digit < 1:
+    print("Password must contain at least 1 digit")
+  else:
+    verified += 1
+
+  if specChar < 1:
+    print("Password must contain at least 1 special character from !@#$%^&*")
+  else:
+    verified += 1
 
   return verified
 
