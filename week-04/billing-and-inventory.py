@@ -15,19 +15,19 @@ def process_order(inventory, cart):
   # Going through each of the item in the cart
   for item in cart:
     if item in inventory:
-      if inventory[item]['stock'] >= cart[item]:
-        cost = inventory[item]['price'] * cart[item]
+      if inventory[item]["stock"] >= cart[item]:
+        cost = inventory[item]["price"] * cart[item]
         total += cost
 
         #Updating the stock
-        inventory[item]['stock'] -= cart[item]
+        inventory[item]["stock"] -= cart[item]
         # Print item bill
         print(f"{item} x{cart[item]} = NPR {cost}")
       else:
         #if carts item quantity is greater than stock quantity
         print(f"Sorry, not enough stock for {item}")
     else:
-      #if there isn't any stock left of that item in the inventory
+      #if there isn"t any stock left of that item in the inventory
       print(f"{item} is not available in inventory")
 
   #Showing the total amount
@@ -37,7 +37,7 @@ def process_order(inventory, cart):
   #Displaying the updated stock
   updated_stock = []
   for item in cart:
-    updated_stock.append(f"{item}={inventory[item]['stock']}")
+    updated_stock.append(f"{item}={inventory[item]["stock"]}")
 
   print("Updated stock: " + ", ".join(updated_stock))
 

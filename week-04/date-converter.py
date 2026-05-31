@@ -37,7 +37,7 @@ for customer in customers:
   #Formatting based on style
   if customer["style"] == "iso":
     #Just show YYYY-MM-DD format
-    output_date = f"{converted} {customer['need']}"
+    output_date = f"{converted} {customer["need"]}"
 
   elif customer["style"] == "full":
     #Show with day and month name
@@ -45,19 +45,19 @@ for customer in customers:
 
     if customer["need"] == "BS":
       month_name = bs_months[m-1]
-      output_date = f"{d}th {month_name}, {y} {customer['need']}"
+      output_date = f"{d}th {month_name}, {y} {customer["need"]}"
 
     else:
-      output_date = f"{converted} {customer['need']}"
+      output_date = f"{converted} {customer["need"]}"
 
   elif customer["style"] == "nepali":
     #Show Nepali month name format
     y, m, d = map(int, converted.split("-"))
     month_name = bs_months[m-1]
-    output_date = f"{d} {month_name} {y} {customer['need']}"
+    output_date = f"{d} {month_name} {y} {customer["need"]}"
 
   else:
-    output_date = f"{converted} {customer['need']}"
+    output_date = f"{converted} {customer["need"]}"
 
 #display according to the users need
-print(f"{customer['name']} | Original: {customer['date']} {customer['cal']} | Converted: {output_date}")
+print(f"{customer["name"]} | Original: {customer["date"]} {customer["cal"]} | Converted: {output_date}")
