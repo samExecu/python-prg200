@@ -59,5 +59,5 @@ for customer in customers:
   else:
     output_date = f"{converted} {customer["need"]}"
 
-#display according to the users need
-print(f"{customer["name"]} | Original: {customer["date"]} {customer["cal"]} | Converted: {output_date}")
+  #display according to the users need
+  print(f"{customer["name"]} | Original: {customer["date"]} {customer["cal"]} | Converted: {output_date}")
